@@ -29,4 +29,18 @@
   outline: none;
 }
 
+.palette {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+}
+.palette h2 {
+  margin: 10px;
+}
+.palette .colList {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */

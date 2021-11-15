@@ -41,8 +41,16 @@ document.querySelector("#signIn").addEventListener("click", () => {
 let paletteArray = [];
 
 paletteArray.push(
-  new Palette("Dune", ["#34495E", "#715A68", "#F6C29A", "#F5AD92", "#F18985"]),
-  new Palette("UI", ["#363537", "#9BC53D", "#3F7CAC", "#D62246", "#E7E6F7"])
+  new Palette(
+    "Dune",
+    ["#34495E", "#715A68", "#F6C29A", "#F5AD92", "#F18985"],
+    0
+  ),
+  new Palette("UI", ["#363537", "#9BC53D", "#3F7CAC", "#D62246", "#E7E6F7"], 1)
 );
 
-paletteArray[0].renderEditor();
+document.querySelector("#paletteList").addEventListener("click", (event) => {
+  document.querySelector("#palModal").style.display = "block";
+  console.log(event.target.id);
+  paletteArray[event.target.id].renderEditor();
+});

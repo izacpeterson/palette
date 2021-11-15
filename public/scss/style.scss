@@ -27,3 +27,16 @@
     }
   }
 }
+.palette {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  h2 {
+    margin: 10px;
+  }
+  .colList {
+    display: flex;
+  }
+}

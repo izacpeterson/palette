@@ -1,17 +1,19 @@
 class Palette {
-  constructor(name, colors) {
+  constructor(name, colors, ID) {
     this.name = name;
     this.colors = colors;
+    this.ID = ID;
     this.renderList();
   }
   renderList() {
+    console.log(this.ID);
     let colors = "";
     this.colors.forEach((col) => {
       colors += `<span class="color" style="background:${col}">${col}</span>`;
     });
     document.querySelector(
       "#paletteList"
-    ).innerHTML += `<div class='palette' onclick="document.querySelector('#palModal').style.display='block'; "><h2>${this.name}</h2>${colors}</div>`;
+    ).innerHTML += `<div class='palette'><h2>${this.name}</h2><span class="colList">${colors}</span><button id="${this.ID}">Edit</button></div>`;
   }
   renderEditor() {
     document.querySelector("#palModalName").innerHTML = this.name;
